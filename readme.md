@@ -22,12 +22,12 @@ $ php artisan ui bootstrap --auth
 Add repository path to composer.json file
 
 ```
-"repositories": [
-    {
+"repositories": {
+    "eburonmedia/ecma-core": {
         "type": "vcs",
         "url": "https://github.com/eburonmedia/EcmaCore"
     }
-]
+}
 ```
 
 Install the core package
