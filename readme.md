@@ -42,6 +42,12 @@ Load the migrations
 $ php artisan migrate
 ```
 
+Vendor publish the config file and the assets
+
+``` bash
+$ php artisan vendor:publish
+```
+
 ## Change log
 
 Please see the [changelog](changelog.md) for more information on what has changed recently.
