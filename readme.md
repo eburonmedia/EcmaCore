@@ -33,7 +33,7 @@ Add repository path to composer.json file
 Install the core package
 
 ``` bash
-$ composer require-dev eburonmedia/ecma-core
+$ composer require eburonmedia/ecma-core --dev
 ```
 
 Load the migrations
