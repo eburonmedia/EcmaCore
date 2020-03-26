@@ -5,4 +5,4 @@ All notable changes to `EcmaCore` will be documented in this file.
 ## Version 1.0
 
 ### Added
-- Everything
+- First Release
