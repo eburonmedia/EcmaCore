@@ -4,6 +4,9 @@ namespace EburonMedia\EcmaCore\Traits;
 
 trait EcmaUsersTrait
 {
+    protected $keyType = 'string';
+    public $incrementing = false;
+
     public function getFullNameAttribute()
     {
         if (isset($this->last_name)) {
