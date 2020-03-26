@@ -48,6 +48,22 @@ Vendor publish the config file and the assets
 $ php artisan vendor:publish
 ```
 
+## User trait
+
+Add the user trait to the user model and import the class
+
+```
+use EcmaUsersTrait;
+```
+
+## Maintenance middleware
+
+For using the maintenance mode you will have to add the included middleware to your routes
+
+```
+ecma.maintenance
+```
+
 ## Change log
 
 Please see the [changelog](changelog.md) for more information on what has changed recently.
