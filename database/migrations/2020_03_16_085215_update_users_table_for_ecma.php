@@ -14,6 +14,8 @@ class UpdateUsersTableForEcma extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
+            $table->renameColumn('name', 'first_name');
+            $table->string('last_name')->after('first_name');
             $table->integer('admin_role')->default(0)->after('remember_token');
             $table->boolean('developer')->default(0)->after('admin_role');
             $table->boolean('active')->default(1)->after('developer');
