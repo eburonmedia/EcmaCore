@@ -19,6 +19,17 @@ $ composer require laravel/ui
 $ php artisan ui bootstrap --auth
 ```
 
+Add repository path to composer.json file
+
+```
+"repositories": [
+    {
+        "type": "vcs",
+        "url": "https://github.com/eburonmedia/EcmaCore"
+    }
+]
+```
+
 Install the core package
 
 ``` bash
