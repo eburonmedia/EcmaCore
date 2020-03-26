@@ -50,10 +50,13 @@ $ php artisan vendor:publish
 
 ## User trait
 
-Add the user trait to the user model and import the class
+Add the user trait to the user model and import the class and add the required id properties
 
 ```
 use EcmaUsersTrait;
+
+protected $keyType = 'string';
+public $incrementing = false;
 ```
 
 ## Maintenance middleware
