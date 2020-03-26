@@ -22,7 +22,7 @@ $ php artisan ui bootstrap --auth
 Install the core package
 
 ``` bash
-$ composer require eburonmedia/ecma-core
+$ composer require-dev eburonmedia/ecma-core
 ```
 
 Load the migrations
