@@ -1,6 +1,6 @@
 {
     "name": "eburonmedia/ecma-core",
-    "description": ":package_description",
+    "description": "Core package for Eburon Media Content Management Application",
     "license": "UNLICENSED",
     "authors": [
         {
@@ -10,16 +10,10 @@
         }
     ],
     "homepage": "https://github.com/eburonmedia/ecma-core",
-    "keywords": ["Laravel", "EcmaCore"],
+    "keywords": ["Eburon.media", "EcmaCore"],
     "require": {
         "illuminate/support": "~7",
         "doctrine/dbal": "^2.10"
-    },
-    "require-dev": {
-        "phpunit/phpunit": "^8.0",
-        "mockery/mockery": "^1.1",
-        "orchestra/testbench": "~3|~4",
-        "sempro/phpunit-pretty-print": "^1.0"
     },
     "autoload": {
         "psr-4": {
@@ -28,11 +22,6 @@
         "files": [
             "src/Http/helpers.php"
         ]
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "EburonMedia\\EcmaCore\\Tests\\": "tests"
-        }
     },
     "extra": {
         "laravel": {
