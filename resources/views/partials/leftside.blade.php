@@ -31,6 +31,14 @@
                     <span class="nav-main-link-name">Dashboard</span>
                 </a>
             </li>
+            @foreach(config('ecma-core.modules') as $menu)
+            <li class="{{ $menu['class_name'] }}">
+                <a class="nav-main-link {{ set_active(config('ecma-core.route_name').'/'.$menu['active_route'], $menu['single_route']) }}" href="/{{ config('ecma-core.route_name') }}/{{ $menu['route'] }}">
+                    <i class="nav-main-link-icon fal fa-{{ $menu['fa-icon'] }} fa-fw"></i>
+                    <span class="nav-main-link-name">{{ $menu['name'] }}</span>
+                </a>
+            </li>
+            @endforeach
 
             <li class="nav-main-heading"></li>
 
