@@ -13,7 +13,7 @@ class Maintenance
     {
         $settings = EcmaSetting::default();
 
-        if ($settings->maintenance == 1) {
+        if ($settings->maintenance_mode == 1) {
             $client = $_SERVER['REMOTE_ADDR'];
             $access = EcmaIp::where('ip', $client)->first();
 
