@@ -18,7 +18,7 @@
 
         <link rel="stylesheet" id="css-icons" href="{{ asset('ecma/css/icons.css') }}">
         <link rel="stylesheet" id="css-plugins" href="{{ asset('ecma/css/plugins.css') }}">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,400i,600,700">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
         <link rel="stylesheet" id="css-main" href="{{ asset('ecma/css/ecma.css') }}">
         @if(config('ecma-core.theme') != null)
         <link rel="stylesheet" id="css-theme" href="{{ asset('ecma/css/themes/'. config('ecma-core.theme') .'.css') }}">
