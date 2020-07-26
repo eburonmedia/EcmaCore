@@ -30,7 +30,7 @@
     </head>
     <body>
         <div id="page-loader" class="show"></div>
-        <div id="page-container" class="sidebar-o sidebar-dark enable-page-overlay side-scroll page-header-fixed page-header-light">
+        <div id="page-container" class="{{ config('ecma-core.layout') }}">
             @if(Auth::user()->is_developer)
                 @include('ecma-core::partials.rightside')
             @endif

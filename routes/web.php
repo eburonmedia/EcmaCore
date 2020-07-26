@@ -24,7 +24,6 @@ Route::group(
                 'middleware' => 'ecma.admin'
             ],
             function () {
-                Route::get('/', [DashboardController::class, 'index'])->name('ecma');
                 Route::get('logout', [AuthController::class, 'logout'])->name('ecma.logout');
                 Route::get('profile', [AdminsController::class, 'profile'])->name('ecma.profile');
                 Route::post('update_profile', [AdminsController::class, 'updateProfile'])->name('ecma.update_profile');
