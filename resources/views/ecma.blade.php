@@ -5,11 +5,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 
         <title>
-            ContentApp > @yield('module_title')
+            EcmaPro > @yield('module_title')
         </title>
 
-        <meta name="description" content="Eburon.Media Content Management Application">
-        <meta name="author" content="Eburon.Media">
+        <meta name="description" content="Easy Content Management Application Pro">
+        <meta name="author" content="Maikel Zwart | HouseOfCodes">
         <meta name="robots" content="noindex, nofollow">
 
         <meta name="csrf-token" content="{{ csrf_token() }}">

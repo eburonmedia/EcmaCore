@@ -4,10 +4,10 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 
-        <title>ContentApp - Login</title>
+        <title>EcmaPro - Login</title>
 
-        <meta name="description" content="Eburon.Media Content Management Application">
-        <meta name="author" content="Eburon.Media">
+        <meta name="description" content="Easy Content Management Application Pro">
+        <meta name="author" content="Maikel Zwart | HouseOfCodes">
         <meta name="robots" content="noindex, nofollow">
 
         <link rel="shortcut icon" type="image/x-icon" href="{{ asset('ecma/img/favicon.ico') }}">
@@ -34,7 +34,7 @@
 
                                 <div class="mb-3 text-center">
                                     <a class="link-fx font-w700 font-size-h1" href="{{ route('ecma.login') }}">
-                                        <span class="text-primary">Content</span><span class="text-info">App</span>
+                                        <span class="text-primary">Ecma</span><span class="text-info">Pro</span>
                                     </a>
                                     <p class="text-uppercase font-w700 font-size-sm text-muted">Inloggen</p>
                                 </div>
@@ -76,7 +76,7 @@
                                     Build to Work
                                 </p>
                                 <p class="font-size-lg font-w600 text-white-75 mb-0">
-                                    By <a href="https://eburon.media" target="_blank" style="color:#000; text-transform:uppercase;">Eburon.<span style="color:#3399cc">Media</span></a> &copy; {{ date('Y') }}
+                                    By <a href="https://houseofcodes.nl" target="_blank" style="color:#000; text-transform:uppercase;">HouseOfCodes</a> &copy; {{ date('Y') }}
                                 </p>
                             </div>
                         </div>
