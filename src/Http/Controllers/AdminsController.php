@@ -11,7 +11,7 @@ class AdminsController extends Controller
 {
     public function index()
     {
-        $admins = User::where('admin_role', '!=', 0)->where('developer', 1)->get();
+        $admins = User::where('admin_role', '!=', 0)->where('developer', 0)->get();
         $all_users = User::where('admin_role', 0)->get();
 
         return view('ecma-core::settings.admins.index', compact('admins', 'all_users'));

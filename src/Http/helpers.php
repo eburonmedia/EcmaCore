@@ -83,7 +83,7 @@ function changeDate($date, $show_time = true)
     }
 }
 
-function money($amount, $show_symbol = true)
+function simpleMoney($amount, $show_symbol = true)
 {
     if ($show_symbol == true) {
         return '€ '.number_format($amount, 2, ',', '.');
