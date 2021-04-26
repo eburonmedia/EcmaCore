@@ -150,7 +150,7 @@ Onderhoud
 </script>
 @endsection
 
-@section('help')
+@section('right_sidebar')
 <p>Met de onderhouds modus kun je de website onbereikbaar maken voor de buitenwereld. Als je hier je eigen naam/ipadres toevoegd kun je de website vanaf het opgegeven ipadres normaal bezoeken.</p>
 <p>De Content Management Applicatie is altijd te bereiken via {{ env('APP_URL') }}/{{ config('ecma-core.route_name') }}</p>
 @endsection

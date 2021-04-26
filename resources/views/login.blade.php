@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 
-        <title>EcmaPro - Login</title>
+        <title>{{ config('ecma-core.app_name') }} - Login</title>
 
         <meta name="description" content="Easy Content Management Application Pro">
         <meta name="author" content="Maikel Zwart | HouseOfCodes">
@@ -34,7 +34,7 @@
 
                                 <div class="mb-3 text-center">
                                     <a class="link-fx font-w700 font-size-h1" href="{{ route('ecma.login') }}">
-                                        <span class="text-primary">Ecma</span><span class="text-info">Pro</span>
+                                        <span class="text-primary">{{ config('ecma-core.app_name') }}</span>
                                     </a>
                                     <p class="text-uppercase font-w700 font-size-sm text-muted">Inloggen</p>
                                 </div>

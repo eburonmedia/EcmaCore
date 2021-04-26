@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 
         <title>
-            EcmaPro > @yield('module_title')
+            {{ config('ecma-core.app_name') }} > @yield('module_title')
         </title>
 
         <meta name="description" content="Easy Content Management Application Pro">

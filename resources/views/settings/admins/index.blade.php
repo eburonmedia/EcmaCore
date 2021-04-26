@@ -204,7 +204,7 @@ Admins
 </script>
 @endsection
 
-@section('help')
+@section('right_sidebar')
 <p>Admins hebben toegang tot de Content Management Applicatie</p>
 <p>Alleen admins met de rol "Super Admin" kunnen hier admins toevoegen en wijzigen</p>
 @endsection

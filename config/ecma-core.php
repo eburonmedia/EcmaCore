@@ -2,6 +2,17 @@
 
 return [
     'route_name' => 'cma',
+
+    'app_name' => 'EcmaPro',
+    'app_name_small' => '<span class="text-white-75">E</span><span class="text-white">P</span>',
+    'app_name_large' => '<span class="text-white-75">Ecma</span><span class="text-white">Pro</span>',
+
+    'show_sidebar_toggle' => true,
+    'show_sidebar_mini_toggle' => true,
+
+    'show_right_sidebar_btn' => true,
+    'right_sidebar_btn_icon' => 'fas fa-fw fa-question-square',
+    'right_sidebar_title' => 'Help',
     /*
     |--------------------------------------------------------------------------
     | Default Theme

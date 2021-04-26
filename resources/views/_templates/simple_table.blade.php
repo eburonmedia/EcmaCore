@@ -57,8 +57,8 @@ Dashboard
 <script>
     jQuery(function () {
         jQuery('#datatable1').dataTable({
-            pageLength: 10,
-            lengthMenu: [[10, 30, 50, -1], [10, 30, 50, "Alles"]],
+            pageLength: 50,
+            lengthMenu: [[30, 50, 100, -1], [30, 50, 100, "Alles"]],
             autoWidth: false,
             language: {
                 info: '_START_ tot _END_ van _TOTAL_'

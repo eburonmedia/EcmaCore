@@ -83,5 +83,5 @@ Dashboard
 @section('scripts')
 @endsection
 
-@section('help')
+@section('right_sidebar')
 @endsection

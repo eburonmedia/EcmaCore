@@ -86,7 +86,7 @@ Profiel
 </div>
 @endsection
 
-@section('help')
+@section('right_sidebar')
 <p>Hier kun jij je eigen gegevens wijzigen. Het e-mailadres wordt gecontroleerd of het niet al bestaat.</p>
 <p>Vul het wachtwoord alleen in als je dit wijzigen, wanneer het veld wachtwoord leeg is blijft je huidige wachtwoord geldig.</p>
 @endsection

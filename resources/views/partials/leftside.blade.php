@@ -4,17 +4,18 @@
         <div class="content-header bg-white-10">
             <a class="link-fx font-w600 font-size-lg text-white" href="{{ route('ecma') }}">
                 <span class="smini-visible">
-                    <span class="text-white-75">E</span><span class="text-white">P</span>
+                    {!! config('ecma-core.app_name_small', '<span class="text-white-75">E</span><span class="text-white">P</span>') !!}
                 </span>
                 <span class="smini-hidden">
-                    <span class="text-white-75">Ecma</span><span class="text-white">Pro</span>
+                    {!! config('ecma-core.app_name_large', '<span class="text-white-75">Ecma</span><span class="text-white">Pro</span>') !!}
                 </span>
             </a>
             <div>
+                @if(config('ecma-core.show_sidebar_mini_toggle') == true)
                 <a class="text-white-75 d-none d-lg-inline ml-2" data-toggle="layout" data-action="sidebar_mini_toggle" href="javascript:void(0)">
                     <i class="fa fa-arrow-left" id="sidebar-style-toggler"></i>
                 </a>
-
+                @endif
                 <a class="d-lg-none text-white ml-2" data-toggle="layout" data-action="sidebar_close" href="javascript:void(0)">
                     <i class="fa fa-times-circle"></i>
                 </a>

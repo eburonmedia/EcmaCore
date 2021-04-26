@@ -1,7 +1,7 @@
 <header id="page-header">
 
     <div class="content-header">
-
+        @if(config('ecma-core.show_sidebar_toggle') == true)
         <div>
 
             <button type="button" class="btn btn-dual mr-1" data-toggle="layout" data-action="sidebar_toggle">
@@ -9,7 +9,7 @@
             </button>
 
         </div>
-
+        @endif
         <div>
             {{-- <div class="d-inline-block">
                 <button type="button" class="btn btn-dual" id="page-header-notifications-modal" data-toggle="modal" data-target="#notificationsModal">
@@ -36,11 +36,11 @@
                     </div>
                 </div>
             </div>
-
+            @if(config('ecma-core.show_right_sidebar_btn', true) == true)
             <button type="button" class="btn btn-dual text-info" data-toggle="layout" data-action="side_overlay_toggle">
-                <i class="fas fa-fw fa-question-square"></i>
+                <i class="{{ config('ecma-core.right_sidebar_btn_icon', 'fas fa-fw fa-question-square') }}"></i>
             </button>
-
+            @endif
         </div>
 
     </div>
