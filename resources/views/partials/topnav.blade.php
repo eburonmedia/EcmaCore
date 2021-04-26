@@ -1,15 +1,15 @@
 <header id="page-header">
 
     <div class="content-header">
-        @if(config('ecma-core.show_sidebar_toggle') == true)
-        <div>
 
+        <div>
+            @if(config('ecma-core.show_sidebar_toggle') == true)
             <button type="button" class="btn btn-dual mr-1" data-toggle="layout" data-action="sidebar_toggle">
                 <i class="fa fa-fw fa-bars"></i>
             </button>
-
+            @endif
         </div>
-        @endif
+
         <div>
             {{-- <div class="d-inline-block">
                 <button type="button" class="btn btn-dual" id="page-header-notifications-modal" data-toggle="modal" data-target="#notificationsModal">
