@@ -29,7 +29,7 @@
 
                 <li class="nav-main-item">
                     <a class="nav-main-link {{ set_active(config('ecma-core.route_name'), 1) }}" href="{{ route('ecma') }}">
-                        <i class="nav-main-link-icon fa fa-tachometer-alt fa-fw"></i>
+                        <i class="nav-main-link-icon {{ config('ecma-core.sidebar_icon_type') }} {{ config('ecma-core.fa-tachometer-alt') }} fa-fw"></i>
                         <span class="nav-main-link-name">Dashboard</span>
                     </a>
                 </li>
@@ -37,7 +37,7 @@
                 <li class="{{ $menu['class_name'] }}">
                     @if($menu['name'] != '')
                     <a class="nav-main-link {{ set_active(config('ecma-core.route_name').'/'.$menu['active_route'], $menu['single_route']) }}" href="/{{ config('ecma-core.route_name') }}/{{ $menu['route'] }}">
-                        <i class="nav-main-link-icon fal fa-{{ $menu['fa-icon'] }} fa-fw"></i>
+                        <i class="nav-main-link-icon {{ config('ecma-core.sidebar_icon_type') }} fa-{{ $menu['fa-icon'] }} fa-fw"></i>
                         <span class="nav-main-link-name">{{ $menu['name'] }}</span>
                     </a>
                     @endif
@@ -48,7 +48,7 @@
 
                 <li class="nav-main-item {{ set_active(config('ecma-core.route_name').'/settings', 0, 'open') }}">
                     <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="true" href="#">
-                        <i class="nav-main-link-icon fa fa-fw fa-cog"></i>
+                        <i class="nav-main-link-icon {{ config('ecma-core.sidebar_icon_type') }} fa-fw fa-cog"></i>
                         <span class="nav-main-link-name">Instellingen</span>
                     </a>
                     <ul class="nav-main-submenu">
@@ -65,7 +65,7 @@
                 <li class="nav-main-heading"></li>
                 <li class="nav-main-item">
                     <a class="nav-main-link" href="{{ env('APP_URL') }}">
-                        <i class="nav-main-link-icon fas fa-fw fa-arrow-alt-circle-left"></i>
+                        <i class="nav-main-link-icon {{ config('ecma-core.sidebar_icon_type') }} fa-fw fa-arrow-alt-circle-left"></i>
                         <span class="nav-main-link-name">Website</span>
                     </a>
                 </li>

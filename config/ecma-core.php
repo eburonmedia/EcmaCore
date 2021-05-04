@@ -10,6 +10,9 @@ return [
     'show_sidebar_toggle' => true,
     'show_sidebar_mini_toggle' => true,
 
+    'sidebar_icon_type' => 'fas',
+    'sidebar_dashboard_icon' => 'fa-tachometer-alt',
+
     'show_right_sidebar_btn' => true,
     'right_sidebar_btn_icon' => 'fas fa-fw fa-question-square',
     'right_sidebar_title' => 'Help',
