@@ -29,7 +29,7 @@
 
                 <li class="nav-main-item">
                     <a class="nav-main-link {{ set_active(config('ecma-core.route_name'), 1) }}" href="{{ route('ecma') }}">
-                        <i class="nav-main-link-icon {{ config('ecma-core.sidebar_icon_type') }} {{ config('ecma-core.fa-tachometer-alt') }} fa-fw"></i>
+                        <i class="nav-main-link-icon {{ config('ecma-core.sidebar_icon_type') }} {{ config('ecma-core.sidebar_dashboard_icon') }} fa-fw"></i>
                         <span class="nav-main-link-name">Dashboard</span>
                     </a>
                 </li>
