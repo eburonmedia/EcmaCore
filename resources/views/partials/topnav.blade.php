@@ -8,6 +8,10 @@
                 <i class="fa fa-fw fa-bars"></i>
             </button>
             @endif
+
+            <button type="button" class="btn btn-dual" data-toggle="layout" data-action="header_search_on">
+                <i class="fa fa-fw fa-search"></i> <span class="ml-1 d-none d-sm-inline-block">Search</span>
+            </button>
         </div>
 
         <div>
@@ -43,6 +47,24 @@
             @endif
         </div>
 
+    </div>
+
+    <div id="page-header-search" class="overlay-header bg-header-dark show">
+        <div class="bg-white-10">
+            <div class="content-header">
+                <form class="w-100" action="be_pages_generic_search.html" method="POST">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <!-- Layout API, functionality initialized in Template._uiApiLayout() -->
+                            <button type="button" class="btn btn-alt-primary" data-toggle="layout" data-action="header_search_off">
+                                <i class="fa fa-fw fa-times-circle"></i>
+                            </button>
+                        </div>
+                        <input type="text" class="form-control border-0" placeholder="Search or hit ESC.." id="page-header-search-input" name="page-header-search-input">
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
 
     <div id="page-header-loader" class="overlay-header bg-primary-darker">

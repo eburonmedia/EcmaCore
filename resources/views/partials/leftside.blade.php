@@ -4,10 +4,10 @@
         <div class="content-header bg-white-10">
             <a class="link-fx font-w600 font-size-lg text-white" href="{{ route('ecma') }}">
                 <span class="smini-visible">
-                    {!! config('ecma-core.app_name_small', '<span class="text-white-75">E</span><span class="text-white">P</span>') !!}
+                    {!! config('ecma-core.app_name_small') !!}
                 </span>
                 <span class="smini-hidden">
-                    {!! config('ecma-core.app_name_large', '<span class="text-white-75">Ecma</span><span class="text-white">Pro</span>') !!}
+                    {!! config('ecma-core.app_name_large') !!}
                 </span>
             </a>
             <div>
