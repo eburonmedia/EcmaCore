@@ -79,6 +79,8 @@ return [
 
     'modules' => [],
 
+    'show_settings_to_all_users' => false,
+
     'settings' => [
         1 => [
             'class_name' => 'nav-main-item',

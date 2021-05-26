@@ -34,18 +34,31 @@
                     </a>
                 </li>
                 @foreach(config('ecma-core.modules') as $menu)
-                <li class="{{ $menu['class_name'] }}">
-                    @if($menu['name'] != '')
-                    <a class="nav-main-link {{ set_active(config('ecma-core.route_name').'/'.$menu['active_route'], $menu['single_route']) }}" href="/{{ config('ecma-core.route_name') }}/{{ $menu['route'] }}">
-                        <i class="nav-main-link-icon {{ config('ecma-core.sidebar_icon_type') }} fa-{{ $menu['fa-icon'] }} fa-fw"></i>
-                        <span class="nav-main-link-name">{{ $menu['name'] }}</span>
-                    </a>
+                @if($menu['admin_only'] == true)
+                    @if(Auth::user()->admin_role >= 2)
+                    <li class="{{ $menu['class_name'] }}">
+                        @if($menu['name'] != '')
+                        <a class="nav-main-link {{ set_active(config('ecma-core.route_name').'/'.$menu['active_route'], $menu['single_route']) }}" href="/{{ config('ecma-core.route_name') }}/{{ $menu['route'] }}">
+                            <i class="nav-main-link-icon {{ config('ecma-core.sidebar_icon_type') }} fa-{{ $menu['fa-icon'] }} fa-fw"></i>
+                            <span class="nav-main-link-name">{{ $menu['name'] }}</span>
+                        </a>
+                        @endif
+                    </li>
                     @endif
-                </li>
+                @else
+                    <li class="{{ $menu['class_name'] }}">
+                        @if($menu['name'] != '')
+                        <a class="nav-main-link {{ set_active(config('ecma-core.route_name').'/'.$menu['active_route'], $menu['single_route']) }}" href="/{{ config('ecma-core.route_name') }}/{{ $menu['route'] }}">
+                            <i class="nav-main-link-icon {{ config('ecma-core.sidebar_icon_type') }} fa-{{ $menu['fa-icon'] }} fa-fw"></i>
+                            <span class="nav-main-link-name">{{ $menu['name'] }}</span>
+                        </a>
+                        @endif
+                    </li>
+                @endif
                 @endforeach
 
+                @if(config('ecma-core.show_settings_to_all_users') == true)
                 <li class="nav-main-heading"></li>
-
                 <li class="nav-main-item {{ set_active(config('ecma-core.route_name').'/settings', 0, 'open') }}">
                     <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="true" href="#">
                         <i class="nav-main-link-icon {{ config('ecma-core.sidebar_icon_type') }} fa-fw fa-cog"></i>
@@ -61,6 +74,26 @@
                         @endforeach
                     </ul>
                 </li>
+                @else
+                    @if(Auth::user()->admin_role >= 2)
+                        <li class="nav-main-heading"></li>
+                        <li class="nav-main-item {{ set_active(config('ecma-core.route_name').'/settings', 0, 'open') }}">
+                            <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="true" href="#">
+                                <i class="nav-main-link-icon {{ config('ecma-core.sidebar_icon_type') }} fa-fw fa-cog"></i>
+                                <span class="nav-main-link-name">Instellingen</span>
+                            </a>
+                            <ul class="nav-main-submenu">
+                                @foreach(config('ecma-core.settings') as $menu_setting)
+                                <li class="{{ $menu_setting['class_name'] }}">
+                                    <a class="nav-main-link {{ set_active(config('ecma-core.route_name').'/settings/'. $menu_setting['active_route'], $menu_setting['single_route']) }}" href="/{{ config('ecma-core.route_name') }}/settings/{{ $menu_setting['route'] }}">
+                                        <span class="nav-main-link-name">{{ $menu_setting['name'] }}</span>
+                                    </a>
+                                </li>
+                                @endforeach
+                            </ul>
+                        </li>
+                    @endif
+                @endif
 
                 <li class="nav-main-heading"></li>
                 <li class="nav-main-item">
