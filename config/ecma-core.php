@@ -10,6 +10,11 @@ return [
     'show_sidebar_toggle' => true,
     'show_sidebar_mini_toggle' => true,
 
+    'header_search' => true,
+    'header_search_name' => 'Zoeken',
+    'header_search_placeholder' => 'Zoek op naam of druk op ESC',
+    'header_search_url' => '#',
+
     'sidebar_icon_type' => 'fas',
     'sidebar_dashboard_icon' => 'fa-tachometer-alt',
 
