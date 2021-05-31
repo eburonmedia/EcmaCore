@@ -84,7 +84,7 @@ return [
         1 => [
             'item_type' => 'link',
             'item_text' => 'Wijzig gegevens',
-            'item_url' => route('ecma.profile'),
+            'item_url' => '/backoffice/profile',
             'item_icon' => 'fa-user-edit',
         ]
     ],
