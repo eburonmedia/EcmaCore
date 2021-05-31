@@ -5,12 +5,12 @@
         <div>
             @if(config('ecma-core.show_sidebar_toggle') == true)
             <button type="button" class="btn btn-dual mr-1" data-toggle="layout" data-action="sidebar_toggle">
-                <i class="fa fa-fw fa-bars"></i>
+                <i class="{{ config('ecma-core.sidebar_icon_type') }} fa-fw fa-bars"></i>
             </button>
             @endif
             @if(config('ecma-core.header_search') == true)
             <button type="button" class="btn btn-dual" data-toggle="layout" data-action="header_search_on">
-                <i class="fa fa-fw fa-search"></i> <span class="ml-1 d-none d-sm-inline-block">{{ config('ecma-core.header_search_name') }}</span>
+                <i class="{{ config('ecma-core.sidebar_icon_type') }} fa-fw fa-search"></i> <span class="ml-1 d-none d-sm-inline-block">{{ config('ecma-core.header_search_name') }}</span>
             </button>
             @endif
         </div>
@@ -25,18 +25,28 @@
 
             <div class="dropdown d-inline-block">
                 <button type="button" class="btn btn-dual" id="page-header-user-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <i class="fa fa-fw fa-user d-sm-none"></i>
+                    <i class="{{ config('ecma-core.sidebar_icon_type') }} fa-fw fa-user d-sm-none"></i>
                     <span class="d-none d-sm-inline-block">{{ Auth::user()->full_name }}</span>
-                    <i class="fa fa-fw fa-angle-down ml-1 d-none d-sm-inline-block"></i>
+                    <i class="{{ config('ecma-core.sidebar_icon_type') }} fa-fw fa-angle-down ml-1 d-none d-sm-inline-block"></i>
                 </button>
                 <div class="dropdown-menu dropdown-menu-right p-0" aria-labelledby="page-header-user-dropdown">
                     <div class="p-2">
-                        <a class="dropdown-item" href="{{ route('ecma.profile') }}">
-                            <i class="fa fa-user-edit fa-fw mr-1"></i> Wijzig gegevens
-                        </a>
+                        @foreach(config('ecma-core.user_dropdown') as $user_menu)
+                            @if($user_menu['item_type'] == 'link')
+                                <a class="dropdown-item" href="{{ $user_menu['item_url'] }}">
+                                    <i class="{{ config('ecma-core.sidebar_icon_type') }} {{ $user_menu['item_icon'] }} fa-fw mr-1"></i> {{ $user_menu['item_text'] }}
+                                </a>
+                            @elseif($user_menu['item_type'] == 'divider')
+                                <div role="separator" class="dropdown-divider"></div>
+                            @elseif($user_menu['item_type'] == 'header')
+                                <h6 class="dropdown-header">{{ $user_menu['item_text'] }}</h6>
+                            @elseif($user_menu['item_type'] == 'text')
+                                <p>{{ $user_menu['item_text'] }}</p>
+                            @endif
+                        @endforeach
                         <div role="separator" class="dropdown-divider"></div>
                         <a class="dropdown-item text-danger" href="{{ route('ecma.logout') }}">
-                            <i class="fa fa-fw fa-sign-out-alt mr-1"></i> Uitloggen
+                            <i class="{{ config('ecma-core.sidebar_icon_type') }} fa-fw fa-sign-out-alt mr-1"></i> Uitloggen
                         </a>
                     </div>
                 </div>

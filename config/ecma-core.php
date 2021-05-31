@@ -79,6 +79,16 @@ return [
 
     'modules' => [],
 
+    /* Item types: 'header', 'link', 'divider', 'text'; */
+    'user_dropdown' => [
+        1 => [
+            'item_type' => 'link',
+            'item_text' => 'Wijzig gegevens',
+            'item_url' => route('ecma.profile'),
+            'item_icon' => 'fa-user-edit',
+        ]
+    ],
+
     'show_settings_to_all_users' => false,
 
     'settings' => [
