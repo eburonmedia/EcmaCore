@@ -64,6 +64,7 @@
         <div class="bg-white-10">
             <div class="content-header">
                 <form class="w-100" action="{{ config('ecma-core.header_search_url') }}" method="POST">
+                    @csrf
                     <div class="input-group">
                         <div class="input-group-prepend">
                             <button type="button" class="btn btn-alt-primary" data-toggle="layout" data-action="header_search_off">
