@@ -14,7 +14,9 @@
 
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <link rel="shortcut icon" type="image/x-icon" href="{{ asset('ecma/img/favicon.ico') }}">
+        <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico">
+        <link rel="icon" type="image/png" sizes="192x192" href="/img/favicon-192x192.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon-180x180.png">
 
         <link rel="stylesheet" id="css-icons" href="{{ asset('ecma/css/icons.css') }}">
         <link rel="stylesheet" id="css-plugins" href="{{ asset('ecma/css/plugins.css') }}">
