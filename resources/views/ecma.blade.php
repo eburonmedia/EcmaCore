@@ -29,6 +29,8 @@
         @yield('head_styles')
         <script>window.Laravel = {!! json_encode(['csrfToken' => csrf_token(),]) !!};</script>
         @yield('head_scripts')
+        
+        @livewireStyles
     </head>
     <body>
         <div id="page-loader" class="show"></div>
@@ -62,5 +64,7 @@
         @yield('modals')
 
         @yield('scripts')
+        
+        @livewireScripts
     </body>
 </html>
