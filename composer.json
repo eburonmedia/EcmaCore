@@ -12,7 +12,7 @@
     "homepage": "https://github.com/eburonmedia/ecma-core",
     "keywords": ["Eburon.media", "EcmaCore"],
     "require": {
-        "illuminate/support": "~7|~8|~9|~10",
+        "illuminate/support": "~7|~8|~9|~10|~11",
         "doctrine/dbal": "^2.10|^3.0"
     },
     "autoload": {
